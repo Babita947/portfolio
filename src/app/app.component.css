@@ -1,0 +1,213 @@
+.grid-container {
+    color: white;
+    display: grid;
+    grid-template-columns: 6vw auto;
+    grid-template-rows: 97.9vh 97.9vh auto 97.9vh;
+    grid-gap: 10px;
+    padding: 4px;
+    height: 97.9vh;
+}
+
+.grid-container>div {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    padding: 20px 0;
+    z-index: 5;
+}
+
+.side-nav {
+    grid-area: 1 / 1 / 5 / 2;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+}
+
+.description {
+    grid-area: 1 / 2 / 2 / 3;
+    /* background-color: rgba(118, 163, 189, 0.8); */
+    font-size: 10vh;
+    font-weight: bolder;
+    font-family: auto;
+}
+
+.about {
+    grid-area: 2 / 2 / 3 / 3;
+    /* background-color: rgba(146, 34, 34, 0.8); */
+}
+
+.skills {
+    grid-area: 3 / 2 / 4 / 3;
+    /* background-color: rgba(39, 197, 33, 0.8) */
+}
+
+.contact {
+    grid-area: 4 / 2 / 5 / 3;
+    /* background-color: rgba(182, 28, 123, 0.8); */
+}
+
+.menu {
+    position: -webkit-sticky;
+    position: sticky;
+    transform: translate(0%, -50%);
+    top: 50%;
+}
+
+.menu>div {
+    background-color: #889090;
+    border-radius: 26%;
+    height: 10vh;
+    width: 5vw;
+    margin: 11%;
+    font-size: 2vh;
+    font-weight: bolder;
+    font-family: auto;
+}
+
+.container {
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-container>div:not(.side-nav) {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    padding: 20px;
+}
+
+.title {
+    font-family: auto;
+    font-weight: bolder;
+    font-size: 10vh;
+}
+
+.content {
+    font-family: auto;
+    font-size: 8vh;
+}  
+
+.icon:before {
+    font-size: 10vh;
+    content: "\f101"; 
+    font-family: FontAwesome;
+    font-weight: bolder;
+ }
+
+ div .icon {
+     width: 8vh;
+     height: 21vh;
+ }
+
+.profile {
+    height: 30vh;
+    width: 10vw;
+    border-radius: 50%;
+}
+
+.bolder {
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+p {
+    margin-left: 5vw;
+}
+li {
+    list-style: none;
+    margin-left: 3vw;
+}
+li::before {
+    content: "\f05b";
+    font-family: FontAwesome;
+    font-size: smaller;
+    padding-right: 5vh;
+}
+
+.padding {
+    padding-right: 5vw;
+    text-align: justify;
+}
+
+a {
+    cursor: pointer;
+}
+
+.active, i:hover:not(.icon) {
+    color: #584f4f;
+}
+
+a {
+   color: #59a4e4; 
+}
+.menu>div:hover, .bg {
+    background-color: #eeeaea !important;
+}
+
+h1 {
+    animation: rotate 2.5s linear infinite;
+  }
+
+  @keyframes rotate {
+    0%   { margin-left:0px; top:0px;}
+    50%  {margin-left:15px; top:0px;
+    opacity: 0.4;}
+    100% {margin-left:0px; top:0px;}
+  }
+
+  .a:before{
+    content: ' ';
+    animation-name: head;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+
+
+@keyframes head {
+    0% { content: "I" ; color: #67eff6;}
+    3% { content: "I'" ; color: #15f345;}
+    6% { content: "I'm" ; color: #d81875;}
+    9% { content: "I'm " ; color: #b3e91f;}
+    12% { content: "I'm B" ; color: #e1ec0f;}
+    15% { content: "I'm Ba" ; color: #e64717;}
+    18% { content: "I'm Bab" ; color: #ee14df;}
+    21% { content: "I'm Babi" ; color: #8e17f0;}
+    24% { content: "I'm Babit" ; color: #110ee7;}
+    27% { content: "I'm Babita" ; color: #17f359;}
+    30% { content: "I'm Babita " ; color: #dd7520;}
+    33% { content: "I'm Babita G" ; color: #6111f5;}
+    36% { content: "I'm Babita Gu" ; color: #e9fc16;}
+    39% { content: "I'm Babita Gur" ; color: #f0bc11;}
+    42% { content: "I'm Babita Gurj" ; color: #0cd6e0;}
+    45% { content: "I'm Babita Gurja" ; color: #28e266;}
+    48% { content: "I'm Babita Gurjar" ; color: #f5bd23;}
+    100% { content: "I'm Babita Gurjar." ; color: #e64f95;}
+}
+
+/* @keyframes head {
+    0% { content: "I" }
+    6% { content: "I'" }
+    12% { content: "I'm"}
+    18% { content: "I'm "}
+    24% { content: "I'm B"}
+    30% { content: "I'm Ba"}
+    36% { content: "I'm Bab"}
+    42% { content: "I'm Babi"}
+    48% { content: "I'm Babit"}
+    54% { content: "I'm Babita"}
+    60% { content: "I'm Babita "}
+    66% { content: "I'm Babita G"}
+    72% { content: "I'm Babita Gu"}
+    78% { content: "I'm Babita Gur"}
+    84% { content: "I'm Babita Gurj"}
+    90% { content: "I'm Babita Gurja"}
+    96% { content: "I'm Babita Gurjar"}
+    100% { content: "I'm Babita Gurjar."} */
+/* } */
+
+h1, span, p {
+    font-style:italic;
+}
