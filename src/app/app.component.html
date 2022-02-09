@@ -1,0 +1,115 @@
+<div class="grid-container">
+  <div class="side-nav">
+    <div class="menu d-none d-xl-block">
+      <div
+        class="container"
+        [ngClass]="active === option.id ? 'bg' : ''"
+        *ngFor="let option of menu"
+      >
+        <a [title]="option.id" (click)="navigateTo(option.id)">
+          <i
+            [class]="option.icon"
+            [ngClass]="active === option.id ? 'active' : ''"
+          ></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="description container" id="Home">
+    <span>Hello, <br /><span class="a"></span></span>
+  </div>
+  <div class="about bolder" id="About">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-4 flex-container">
+            <a
+              ><img
+                src="../assets/profile.jpg"
+                class="profile r"
+                data-aos="flip-left"
+                data-aos-offset="200"
+                data-aos-duration="800"
+            /></a>
+          </div>
+          <div class="col-md-8 padding">
+            <h1
+              data-aos="flip-left"
+              data-aos-offset="300"
+              data-aos-duration="800"
+            >
+              <i class="icon r"></i> &nbsp; About
+            </h1>
+            <p>
+              <span
+                data-aos="fade-left"
+                data-aos-offset="400"
+                data-aos-duration="800"
+                >{{ about }}</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills bolder" id="Skills">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-5 flex-container">
+            <div>
+              <h1 data-aos="fade-right">
+                <i class="icon"></i> &nbsp;Technical Skills
+              </h1>
+              <ul>
+                <li
+                  data-aos="fade-right"
+                  *ngFor="let skill of skills; let index = index"
+                >
+                  {{ skill }}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-4 flex-container">
+            <a data-aos="fade-left"
+              ><img src="../assets/profile.jpg" class="profile"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact flex-container bolder" id="Contact">
+    <div>
+      <h1 data-aos="fade-right"><i class="icon"></i> &nbsp; Get In Touch</h1>
+      <p data-aos="fade-left">
+        Say
+        <a
+          [attr.href]="
+            'mailto:' + 'babita.gurjar@gmail.com' + '?subject=' + 'Hello'
+          "
+          title="Say HI"
+          >HI</a
+        >
+        or find me on other platforms:
+        <a
+          [attr.href]="'https://www.linkedin.com/in/babita-gurjar-27937a78/'"
+          title="LinkedIn"
+          >LinkedIn</a
+        >
+        &
+        <a
+          [attr.href]="'https://www.instagram.com/babita_gurjar49/'"
+          title="LinkedIn"
+          >Instagram</a
+        >.
+      </p>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
